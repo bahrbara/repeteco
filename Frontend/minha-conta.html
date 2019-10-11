@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head></head>
+<body style="display: none">
+	<title id="page-title">Minha Conta | Repeteco</title>
+
+	<div class="wrapper" id="wrapper">
+		
+		<div w3-include-html="inc/menu.html"></div>
+
+        <div class="ht__bradcaump__area bg-image--7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Minha Conta</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Minha Conta</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 col-12">
+        				<div class="contact-form-wrap">
+                            <form id="contact-form" action="login.html" method="post">
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="nome" placeholder="Nome*">
+                                    <input type="text" name="sobrenome" placeholder="Sobrenome*">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="cpf" placeholder="CPF*">
+									<input type="text" name="data_nasc" placeholder="Data de nascimento*">
+                                </div>
+                                <div class="single-contact-form space-between">
+									<input type="text" name="celular" placeholder="Celular*">
+									<input type="text" name="email" placeholder="Email*">
+								</div>
+                                <div class="single-contact-form space-between">
+									<select class="form-select" name="cidade">
+										<option>Cidade</option>
+										<option>Biguaçu</option>
+										<option>Florianópolis</option>
+										<option>Palhoça</option>
+										<option>São José</option>
+									</select>
+									<input type="text" name="cep" placeholder="CEP*">
+								</div>								
+								<div class="single-contact-form space-between">
+									<input type="text" name="usuario" placeholder="Usuário*">
+									<input type="text" name="senha" placeholder="Senha*">
+								</div>
+                                <div class="contact-btn">
+									<button type="reset" class="btn-cancel" onclick="window.location.href='index.html'">Voltar</button>
+                                    <button type="submit" >Salvar</button>
+                                </div>
+                            </form>
+                        </div> 
+        			</div>
+        		</div>
+        	</div>
+        </section>
+		
+		<div w3-include-html="inc/footer.html"></div>
+	</div>
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>    
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>

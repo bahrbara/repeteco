@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head></head>
+<body style="display: none">
+	<title id="page-title">Gerenciar Escolas | Repeteco</title>
+
+	<div class="wrapper" id="wrapper">
+		
+		<div w3-include-html="inc/menu.html"></div>
+
+        <div class="ht__bradcaump__area bg-image--6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Gerenciar Escolas</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Gerenciar Escolas</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 col-12">
+        				<div class="contact-form-wrap">
+                            <form id="contact-form" action="#" method="post">
+                                <div class="single-contact-form search-form space-between">
+									<select class="form-select" name="filtro_opcao">
+										<option>Selecione uma opção</option>
+										<option>Bairro</option>
+										<option>CEP</option>
+										<option>Cidade</option>
+										<option>CPF</option>
+										<option>Data de nascimento</option>
+										<option>E-mail</option>
+										<option>Nome</option>
+										<option>Número de celular</option>
+										<option>Sobrenome</option>
+										<option>Usuário</option>
+									</select>
+									<select class="form-select" style="width: 100px" name="filtro_comparador">
+										<option>=</option>
+										<option><</option>
+										<option><=</option>
+										<option>></option>
+										<option>>=</option>
+										<option>Contém</option>
+										<option>Não contém</option>
+									</select>									
+									<input type="text" name="pesquisa" placeholder="Pesquisar">
+									<button>Relatório</button>
+									<button type="submit" onclick="window.location.href='cadastro-escola.html'">Adicionar</button>
+                                </div>
+                                <div class="single-contact-form">
+                                   <a href="">Adicionar outro filtro ao relatório</a>
+                                </div>
+                            </form>
+                        </div> 
+					</div>
+					<div class="col-lg-12 col-12">
+						<table>
+							<thead>
+								<td>Nome</td>
+								<td>Bairro</td>
+								<td>Cidade</td>
+								<td>Nível de Ensino</td>
+								<td>Modalidade de Ensino</td>
+								<td>Ações</td>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Colégio Alpha Objetivo </td>
+									<td>Campinas</td>
+									<td>São José</td>
+									<td>Educação Básica</td>
+									<td>Presencial</td>
+									<td>
+										<a href="cadastro-escola.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Colégio Municipal Maria Luíza de Mello </td>
+									<td>Kobrasol</td>
+									<td>São José</td>
+									<td>Educação Básica</td>
+									<td>Presencial</td>
+									<td>
+										<a href="cadastro-escola.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-close icons expired"></i></a>
+									</td>									
+								</tr>
+								<tr>
+									<td>Colégio Visão </td>
+									<td>Kobrasol</td>
+									<td>São José</td>
+									<td>Ensino Médio</td>
+									<td>Presencial</td>
+									<td>
+										<a href="cadastro-escola.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>										
+								</tr>
+								<tr>
+									<td>Centro Municipal Univrsitário de São José </td>
+									<td>Kobrasol</td>
+									<td>São José</td>
+									<td>Ensio Superior</td>
+									<td>Presencial</td>
+									<td>
+										<a href="cadastro-escola.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-close icons expired"></i></a>
+									</td>										
+								</tr>
+								<tr>
+									<td>E.E.B Professor Laércio Caldeira de Andrada</td>
+									<td>Campinas</td>
+									<td>São José</td>
+									<td>Educação Básica</td>
+									<td>Presencial</td>
+									<td>
+										<a href="cadastro-escola.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>										
+								</tr>
+							</tbody>
+						</table>
+					</div>					
+        		</div>
+        	</div>
+        </section>
+		
+		<div w3-include-html="inc/footer.html"></div>
+	</div>
+
+    <!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>    
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>

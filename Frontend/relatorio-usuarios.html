@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head></head>
+<body style="display: none">
+	<title id="page-title">Relatório de Usuários | Repeteco</title>
+
+	<div class="wrapper" id="wrapper">
+		
+		<div w3-include-html="inc/menu.html"></div>
+
+        <div class="ht__bradcaump__area bg-image--6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Relatório de Usuários</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Relatório de Usuários</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 col-12">
+        				<div class="contact-form-wrap">
+                            <form id="contact-form" action="#" method="post">
+                                <div class="single-contact-form search-form space-between">
+									<select class="form-select" name="filtro_opcao">
+										<option>Selecione uma opção</option>
+										<option>Bairro</option>
+										<option>CEP</option>
+										<option>Cidade</option>
+										<option>CPF</option>
+										<option>Data de nascimento</option>
+										<option>E-mail</option>
+										<option>Nome</option>
+										<option>Número de celular</option>
+										<option>Sobrenome</option>
+										<option>Usuário</option>
+									</select>
+									<select class="form-select" style="width: 100px" name="filtro_comparador">
+										<option>=</option>
+										<option><</option>
+										<option><=</option>
+										<option>></option>
+										<option>>=</option>
+										<option>Contém</option>
+										<option>Não contém</option>
+									</select>									
+									<input type="text" name="pesquisa" placeholder="Pesquisar">
+									<button>Gerar</button>
+									<button>Exportar</button>
+                                </div>
+                                <div class="single-contact-form">
+                                   <a href="">Adicionar outro filtro ao relatório</a>
+                                </div>
+                            </form>
+                        </div> 
+					</div>
+					<div class="col-lg-12 col-12">
+						<table>
+							<thead>
+								<td>Nome</td>
+								<td>Sobrenome</td>
+								<td>E-mail</td>
+								<td>Celular</td>
+								<td>Cidade</td>
+								<td>Ações</td>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Nina Antônia </td>
+									<td>Allana da Luz</td>
+									<td>ninaantoniaallanadaluz-70@gmail.com</td>
+									<td>(61) 98965-7865</td>
+									<td>Brasília</td>
+									<td>
+										<a href=""><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Milena</td>
+									<td>Laura Araújo</td>
+									<td>milenalauraaraujo_@hotmail.com</td>
+									<td>(53) 98381-9189</td>
+									<td>Pelotas</td>
+									<td>
+										<a href=""><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-close icons expired"></i></a>
+									</td>									
+								</tr>
+								<tr>
+									<td>Felipe</td>
+									<td>Bernardo Almeida</td>
+									<td>felipebernardoalmeida@gmail.com.br</td>
+									<td>(38) 99146-2471</td>
+									<td>Montes Claros</td>
+									<td>
+										<a href=""><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>										
+								</tr>
+								<tr>
+									<td>Bruna </td>
+									<td>Nina Tânia Santos</td>
+									<td>brunaninataniasantos@lta-am.com.br</td>
+									<td>(79) 98836-6570</td>
+									<td>Aracaju</td>
+									<td>
+										<a href=""><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-close icons expired"></i></a>
+									</td>										
+								</tr>
+								<tr>
+									<td>Levi </td>
+									<td>Diogo Thomas Nogueira</td>
+									<td>levidiogothomasnogueira_@iacit.com.br</td>
+									<td>(84) 98385-8577</td>
+									<td>Mossoró</td>
+									<td>
+										<a href=""><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>										
+								</tr>
+							</tbody>
+						</table>
+					</div>					
+        		</div>
+        	</div>
+        </section>
+		
+		<div w3-include-html="inc/footer.html"></div>
+	</div>
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>    
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>

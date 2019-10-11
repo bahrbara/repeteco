@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head></head>
+<body style="display: none">
+	<title id="page-title">Cadastro de Serviço | Repeteco</title>
+
+	<div class="wrapper" id="wrapper">
+
+		<div w3-include-html="inc/menu.html"></div>
+
+        <div class="ht__bradcaump__area bg-image-servicos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Cadastro de Serviço</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Cadastro de Serviço</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 col-12">
+        				<div class="contact-form-wrap">
+                            <form id="contact-form" action="#" method="post">
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="nome" placeholder="Título*">
+                                </div>
+                                <div class="single-contact-form space-between">
+									<select class="form-select" name="categoria_servico">
+										<option>Categoria</option>
+										<option>Aulas de reforço</option>
+										<option>Aulas particulares</option>
+										<option>Dança</option>
+										<option>Esportes</option>
+										<option>Lazer e eventos</option>
+										<option>Música</option>
+										<option>Outros</option>
+										<option>Transporte</option>
+									</select>
+									<select class="form-select" name="tipo_profissional">
+										<option>Autônomo</option>
+										<option>MEI</option>
+										<option>Pessoa Física</option>
+										<option>Pessoa Jurídica</option>
+									</select>									
+                                </div>
+                                <div class="single-contact-form space-between">
+									<textarea name="descricao" placeholder="Descrição"></textarea>
+								</div>
+                                <div class="single-contact-form space-between">
+									<select class="form-select" name="nome_escola">
+										<option>Nome da Escola</option>
+										<option>Alfa Objetivo</option>
+										<option>Colégio Municipal Maria Luiza de Melo</option>
+										<option>Dom Jaime</option>
+										<option>E.E.B Prof. Laércio Caldeira de Andrada</option>
+									</select>	
+								</div>								
+								<div class="single-contact-form space-between">
+									<input type="text" name="valor" placeholder="Valor*">			
+									<input type="text" name="tamanho" placeholder="Forma de pagamento*">
+								</div>	
+								<div class="single-contact-form space-between">
+									<select class="form-select" name="status_anuncio">
+										<option>Status do anúncio</option>
+										<option>Aberto</option>
+										<option>Finalizado</option>
+										<option>Cancelado</option>
+									</select>
+									<input type="text" name="data_expiracao" placeholder="Anúncio expira em*">
+								</div>	
+								<div class="single-contact-form space-between">
+									<input type="file" name="anexo1">
+									<input type="file" name="anexo1">
+								</div>	
+
+                                <div class="contact-btn">
+									<button type="reset" class="btn-cancel">Cancelar</button>
+                                    <button type="submit" onclick="window.location.href='meus-servicos.html'">Salvar</button>
+                                </div>
+                            </form>
+                        </div> 
+        			</div>
+        		</div>
+        	</div>
+        </section>
+		
+		<div w3-include-html="inc/footer.html"></div>
+	</div>
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>    
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>

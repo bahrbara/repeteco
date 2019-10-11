@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head></head>
+<body style="display: none">
+	<title id="page-title">Cadastro de Escola | Repeteco</title>
+
+	<div class="wrapper" id="wrapper">
+		
+	<div w3-include-html="inc/menu.html"></div>
+
+        <div class="ht__bradcaump__area bg-image--6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Cadastro de Escolas</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Cadastro de Escolas</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 col-12">
+        				<div class="contact-form-wrap">
+                            <form id="contact-form" action="#" method="post">
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="nome" placeholder="Nome da Escola">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="endereco_cep" placeholder="CEP">
+									<input type="text" name="endereco_rua" placeholder="Rua">
+									<input type="text" name="endereco_numero" placeholder="Número">
+                                </div>
+                                <div class="single-contact-form space-between">
+									<input type="text" name="endereco_complemento" placeholder="Complemento">
+									<input type="text" name="endereco_bairro" placeholder="Bairro">
+								</div>
+                                <div class="single-contact-form space-between">
+									<input type="text" name="endereco_cidade" placeholder="Cidade">
+									<input type="text" name="cursos" placeholder="Curso(s)">
+								</div>								
+								<div class="single-contact-form space-between">
+									<select class="form-select" name="nivel_ensino">
+										<option>Nível de Ensino</option>
+										<option>Educação básica</option>
+										<option>Educação infantil</option>
+										<option>EJA</option>
+										<option>Ensino médio</option>
+										<option>Ensino profissional</option>
+										<option>Ensino superior</option>
+										<option>Ensino técnico</option>
+									</select>
+									<select class="form-select" name="modalidade_ensino">
+											<option>Modalidade de Ensino</option>
+											<option>EAD</option>
+											<option>Presencial<option>
+											<option>Semipresencial</option>
+										</select>									
+								</div>	
+
+								<div class="single-contact-form space-between">
+									<input type="text" name="usuario" placeholder="Usuário*">
+									<input type="text" name="senha" placeholder="Senha*">
+								</div>									
+
+                                <div class="contact-btn">
+									<button type="reset" class="btn-cancel">Cancelar</button>
+                                    <button type="submit" onclick="window.location.href='gerenciar-escolas.html'">Salvar</button>
+                                </div>
+                            </form>
+                        </div> 
+        			</div>
+        		</div>
+        	</div>
+        </section>
+		
+		<div w3-include-html="inc/footer.html"></div>
+	</div>
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>    
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>

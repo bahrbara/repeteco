@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head></head>
+<body style="display: none">
+	<title id="page-title">Meus Produtos | Repeteco</title>
+
+	<div class="wrapper" id="wrapper">
+		
+	<div w3-include-html="inc/menu.html"></div>
+
+        <div class="ht__bradcaump__area bg-image--6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Meus Produtos</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.html">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Meus Produtos</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-12 col-12">
+        				<div class="contact-form-wrap">
+                            <form id="contact-form" action="#" method="post">
+                                <div class="single-contact-form search-form space-between">
+									<select class="form-select" name="filtro_opcao">
+										<option>Selecione uma opção</option>
+										<option>Status</option>
+										<option>Tipo</option>
+										<option>Título</option>
+										<option>Valor</option>
+										<option>Criado em</option>
+										<option>Expira em</option>
+									</select>
+									<input type="text" name="pesquisa" placeholder="Pesquisar">
+									<button>Pesquisar</button>
+									<button type="submit" onclick="window.location.href='cadastro-produto.html'">Adicionar</button>
+                                </div>
+                                <div class="single-contact-form">
+                                </div>
+                            </form>
+                        </div> 
+					</div>
+					<div class="col-lg-12 col-12">
+						<table>
+							<thead>
+								<td>Tipo</td>
+								<td>Título</td>
+								<td>Valor</td>
+								<td>Criado em</td>
+								<td>Expira em</td>
+								<td>Ações</td>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Produto</td>
+									<td>Mochila Monsterhigh linda</td>
+									<td>25,00</td>
+									<td>10/05/2019</td>
+									<td>20/02/2020</td>
+									<td>
+										<a href="/cadastro-produto.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Produto</td>
+									<td>Apostila Positivo 2019</td>
+									<td>30,00</td>
+									<td>18/04/2019</td>
+									<td>10/09/2019</td>
+									<td>
+										<a href="/cadastro-produto.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-close icons expired"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Produto</td>
+									<td>Apostila Positivo 2017</td>
+									<td>10,50</td>
+									<td>08/02/2019</td>
+									<td>10/08/2019</td>
+									<td>
+										<a href="/cadastro-produto.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td>Produto</td>
+									<td>Calça Moletom</td>
+									<td>25,00</td>
+									<td>07/06/2019</td>
+									<td>07/10/2019</td>
+									<td>
+										<a href="/cadastro-produto.html"><i class="icon-note icons"></i></a>
+										<a href=""><i class="icon-trash icons"></i></a>
+										<a href=""><i class="icon-check icons published"></i></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>					
+        		</div>
+        	</div>
+        </section>
+		
+		<div w3-include-html="inc/footer.html"></div>
+	</div>
+
+    <!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>    
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+    <script src="js/active.js"></script>
+</body>
+</html>
