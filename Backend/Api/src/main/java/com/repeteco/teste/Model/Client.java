@@ -1,9 +1,7 @@
 package com.repeteco.teste.Model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "client")
@@ -12,7 +10,6 @@ public class Client {
     @Id
     @GeneratedValue
     private int idClient;
-
     private String name;
     private String cpf;
     private char gender;
@@ -20,15 +17,15 @@ public class Client {
     private String email;
     private String phoneNumber;
     private String address;
+    private String password;
+    private String login;
+    private String type;
 
-    @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name = "id_client")
-    private List<Account> accountList;
 
     public Client() {}
 
-    public Client(String name, String cpf, char gender, Date birthDate, String email, String phoneNumber, String address) {
-        this.accountList = new ArrayList<>();
+    public Client(String name, String cpf, char gender, Date birthDate, String email, String phoneNumber, String address,
+                  String password, String login, String type) {
         this.name = name;
         this.cpf = cpf;
         this.gender = gender;
@@ -36,10 +33,37 @@ public class Client {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.password = password;
+        this.login = login;
+        this.type = type;
     }
 
     public int getIdClient() {
         return idClient;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getCpf() {
@@ -98,7 +122,19 @@ public class Client {
         this.address = address;
     }
 
-    public List<Account> getAccountList() {
-        return accountList;
+    @Override
+    public String toString() {
+        return "Client{" +
+                "idClient=" + idClient +
+                ", name='" + name + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", gender=" + gender +
+                ", birthDate=" + birthDate +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                ", login='" + login + '\'' +
+                ", type='" + type + '\'' +
+                '}';
     }
 }
