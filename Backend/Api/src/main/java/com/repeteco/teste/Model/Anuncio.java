@@ -1,9 +1,6 @@
 package com.repeteco.teste.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -18,23 +15,29 @@ public class Anuncio {
     private Date dtInicial;
     private Date dtFinal;
     private String valor;
-    private String escola;
     private String tamanho;
     private String conservacao;
     private Byte[] imagem;
     private String type;
 
 
+    @Column(name = "id_client")
+    private int idClient;
+
+
+    @Column(name = "id_escola")
+    private int idEscola;
+
+
     public Anuncio() {}
 
-    public Anuncio(String titulo, String descricao, Date dtInicial, Date dtFinal, String valor, String escola,
+    public Anuncio(String titulo, String descricao, Date dtInicial, Date dtFinal, String valor,
                    String tamanho, String conservacao, Byte[] imagem, String type) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.dtInicial = dtInicial;
         this.dtFinal = dtFinal;
         this.valor = valor;
-        this.escola = escola;
         this.tamanho = tamanho;
         this.conservacao = conservacao;
         this.imagem = imagem;
@@ -89,14 +92,6 @@ public class Anuncio {
         this.valor = valor;
     }
 
-    public String getEscola() {
-        return escola;
-    }
-
-    public void setEscola(String escola) {
-        this.escola = escola;
-    }
-
     public String getTamanho() {
         return tamanho;
     }
@@ -138,7 +133,6 @@ public class Anuncio {
                 ", dtInicial=" + dtInicial +
                 ", dtFinal=" + dtFinal +
                 ", valor='" + valor + '\'' +
-                ", escola='" + escola + '\'' +
                 ", tamanho='" + tamanho + '\'' +
                 ", conservacao='" + conservacao + '\'' +
                 ", imagem='" + imagem + '\'' +

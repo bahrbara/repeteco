@@ -1,6 +1,5 @@
 package com.repeteco.teste.Controller;
 
-import com.repeteco.teste.Model.Account;
 import com.repeteco.teste.Model.Client;
 import com.repeteco.teste.Repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,22 +25,15 @@ public class ClientController {
                 request.getBirthDate(),
                 request.getEmail(),
                 request.getPhoneNumber(),
-                request.getAddress()
+                request.getAddress(),
+                request.getPassword(),
+                request.getLogin(),
+                request.getType()
                 );
-
-        Account accountNormal = new Account('N');
-        Account accountEventual = new Account('E');
-
-        client.getAccountList().add(accountNormal);
-        client.getAccountList().add(accountEventual);
 
         return clientRepository.save(client);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<Client> get() {
-        return clientRepository.findAll();
-    }
 
     @RequestMapping("/{id}")
     public Optional<Client> getById(@PathVariable("id") int idClient){
@@ -54,6 +46,11 @@ public class ClientController {
         clientEdited.setPhoneNumber(request.getPhoneNumber());
         clientEdited.setEmail(request.getEmail());
         clientEdited.setAddress(request.getAddress());
+        clientEdited.setName(request.getName());
+        clientEdited.setGender(request.getGender());
+        clientEdited.setBirthDate(request.getBirthDate());
+        clientEdited.setPassword(request.getPassword());
+        clientEdited.setLogin(request.getLogin());
 
         clientRepository.save(clientEdited);
 
