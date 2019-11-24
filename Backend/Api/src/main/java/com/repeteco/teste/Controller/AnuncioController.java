@@ -45,8 +45,8 @@ public class AnuncioController {
     }
 
     @RequestMapping("/{idClient}")
-    public Optional<Anuncio> getByIdClient(@PathVariable("idClient") int idClient){
-        return anuncioRepository.findById(idClient);
+    public List<Anuncio> getByIdClient(@PathVariable("idClient") int idClient){
+        return anuncioRepository.findByIdClient(idClient);
     }
 
     @RequestMapping("/{type}")
