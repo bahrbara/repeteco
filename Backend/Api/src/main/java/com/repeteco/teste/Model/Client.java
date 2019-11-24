@@ -18,14 +18,13 @@ public class Client {
     private String phoneNumber;
     private String address;
     private String password;
-    private String login;
     private String type;
 
 
     public Client() {}
 
     public Client(String name, String cpf, char gender, Date birthDate, String email, String phoneNumber, String address,
-                  String password, String login, String type) {
+                  String password) {
         this.name = name;
         this.cpf = cpf;
         this.gender = gender;
@@ -34,8 +33,6 @@ public class Client {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.password = password;
-        this.login = login;
-        this.type = type;
     }
 
     public int getIdClient() {
@@ -48,14 +45,6 @@ public class Client {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public String getType() {
@@ -133,7 +122,6 @@ public class Client {
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", address='" + address + '\'' +
-                ", login='" + login + '\'' +
                 ", type='" + type + '\'' +
                 '}';
     }

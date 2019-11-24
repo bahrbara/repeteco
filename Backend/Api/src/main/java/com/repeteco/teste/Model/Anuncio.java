@@ -1,6 +1,8 @@
 package com.repeteco.teste.Model;
 
 import javax.persistence.*;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -17,9 +19,14 @@ public class Anuncio {
     private String valor;
     private String tamanho;
     private String conservacao;
-    private Byte[] imagem;
+    private Byte[] imagem1;
+    private Byte[] imagem2;
+    private Byte[] imagem3;
+    private Byte[] imagem4;
+    private Byte[] imagem5;
     private String type;
 
+    private static final int PRAZOEXPIRACAO = 30;
 
     @Column(name = "id_client")
     private int idClient;
@@ -31,16 +38,20 @@ public class Anuncio {
 
     public Anuncio() {}
 
-    public Anuncio(String titulo, String descricao, Date dtInicial, Date dtFinal, String valor,
-                   String tamanho, String conservacao, Byte[] imagem, String type) {
+    public Anuncio(String titulo, String descricao, String valor, String tamanho, String conservacao, Byte[] imagem1,
+                   Byte[] imagem2, Byte[] imagem3, Byte[] imagem4, Byte[] imagem5, String type) {
         this.titulo = titulo;
         this.descricao = descricao;
-        this.dtInicial = dtInicial;
-        this.dtFinal = dtFinal;
+        this.dtInicial = Calendar.getInstance().getTime();
+        this.dtFinal = Calendar.getInstance().getTime();
         this.valor = valor;
         this.tamanho = tamanho;
         this.conservacao = conservacao;
-        this.imagem = imagem;
+        this.imagem1 = imagem1;
+        this.imagem2 = imagem2;
+        this.imagem3 = imagem3;
+        this.imagem4 = imagem4;
+        this.imagem5 = imagem5;
         this.type = type;
     }
 
@@ -116,12 +127,44 @@ public class Anuncio {
         this.type = type;
     }
 
-    public Byte[] getImagem() {
-        return imagem;
+    public Byte[] getImagem1() {
+        return imagem1;
     }
 
-    public void setImagem(Byte[] imagem) {
-        this.imagem = imagem;
+    public void setImagem1(Byte[] imagem1) {
+        this.imagem1 = imagem1;
+    }
+
+    public Byte[] getImagem2() {
+        return imagem2;
+    }
+
+    public void setImagem2(Byte[] imagem2) {
+        this.imagem2 = imagem2;
+    }
+
+    public Byte[] getImagem3() {
+        return imagem3;
+    }
+
+    public void setImagem3(Byte[] imagem3) {
+        this.imagem3 = imagem3;
+    }
+
+    public Byte[] getImagem4() {
+        return imagem4;
+    }
+
+    public void setImagem4(Byte[] imagem4) {
+        this.imagem4 = imagem4;
+    }
+
+    public Byte[] getImagem5() {
+        return imagem5;
+    }
+
+    public void setImagem5(Byte[] imagem5) {
+        this.imagem5 = imagem5;
     }
 
     @Override
@@ -135,8 +178,14 @@ public class Anuncio {
                 ", valor='" + valor + '\'' +
                 ", tamanho='" + tamanho + '\'' +
                 ", conservacao='" + conservacao + '\'' +
-                ", imagem='" + imagem + '\'' +
+                ", imagem1=" + Arrays.toString(imagem1) +
+                ", imagem2=" + Arrays.toString(imagem2) +
+                ", imagem3=" + Arrays.toString(imagem3) +
+                ", imagem4=" + Arrays.toString(imagem4) +
+                ", imagem5=" + Arrays.toString(imagem5) +
                 ", type='" + type + '\'' +
+                ", idClient=" + idClient +
+                ", idEscola=" + idEscola +
                 '}';
     }
 }

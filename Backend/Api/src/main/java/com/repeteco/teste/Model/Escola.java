@@ -9,11 +9,14 @@ public class Escola {
     @Id
     @GeneratedValue
     private int idEscola;
+    private String city;
     private String name;
     private String neighborhood;
-    private String city;
 
-    public Escola(String name, String neighborhood, String city) {
+    public Escola (){}
+
+    public Escola(int idEscola, String name, String neighborhood, String city) {
+        this.idEscola = idEscola;
         this.name = name;
         this.neighborhood = neighborhood;
         this.city = city;

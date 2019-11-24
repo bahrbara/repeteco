@@ -22,12 +22,14 @@ public class AnuncioController {
         Anuncio anuncio = new Anuncio(
                 request.getTitulo(),
                 request.getDescricao(),
-                request.getDtInicial(),
-                request.getDtFinal(),
                 request.getValor(),
                 request.getTamanho(),
                 request.getConservacao(),
-                request.getImagem(),
+                request.getImagem1(),
+                request.getImagem2(),
+                request.getImagem3(),
+                request.getImagem4(),
+                request.getImagem5(),
                 request.getType()
         );
 
@@ -44,7 +46,7 @@ public class AnuncioController {
         return anuncioRepository.findById(idAnuncio);
     }
 
-    @RequestMapping("/{idClient}")
+    @RequestMapping("/cliente/{idClient}")
     public List<Anuncio> getByIdClient(@PathVariable("idClient") int idClient){
         return anuncioRepository.findByIdClient(idClient);
     }
@@ -59,11 +61,14 @@ public class AnuncioController {
         Anuncio anuncioEdited = anuncioRepository.findById(idAnuncio).orElseThrow(() -> new Exception("Anúncio não encontrado"));
         anuncioEdited.setConservacao(request.getConservacao());
         anuncioEdited.setDescricao(request.getDescricao());
-        anuncioEdited.setImagem(request.getImagem());
+        anuncioEdited.setImagem1(request.getImagem1());
+        anuncioEdited.setImagem1(request.getImagem2());
+        anuncioEdited.setImagem1(request.getImagem3());
+        anuncioEdited.setImagem1(request.getImagem4());
+        anuncioEdited.setImagem1(request.getImagem5());
         anuncioEdited.setTamanho(request.getTamanho());
         anuncioEdited.setTitulo(request.getTitulo());
         anuncioEdited.setValor(request.getValor());
-        anuncioEdited.setType(request.getType());
 
         anuncioRepository.save(anuncioEdited);
 

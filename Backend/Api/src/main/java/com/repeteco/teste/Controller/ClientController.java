@@ -26,9 +26,7 @@ public class ClientController {
                 request.getEmail(),
                 request.getPhoneNumber(),
                 request.getAddress(),
-                request.getPassword(),
-                request.getLogin(),
-                request.getType()
+                request.getPassword()
                 );
 
         return clientRepository.save(client);
@@ -44,13 +42,11 @@ public class ClientController {
     public Client edit(@PathVariable("id") int idClient, @RequestBody Client request) throws Exception {
         Client clientEdited = clientRepository.findById(idClient).orElseThrow(() -> new Exception("Cliente não encontrado"));
         clientEdited.setPhoneNumber(request.getPhoneNumber());
-        clientEdited.setEmail(request.getEmail());
         clientEdited.setAddress(request.getAddress());
         clientEdited.setName(request.getName());
         clientEdited.setGender(request.getGender());
         clientEdited.setBirthDate(request.getBirthDate());
         clientEdited.setPassword(request.getPassword());
-        clientEdited.setLogin(request.getLogin());
 
         clientRepository.save(clientEdited);
 

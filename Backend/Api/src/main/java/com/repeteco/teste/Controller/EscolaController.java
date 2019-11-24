@@ -21,6 +21,7 @@ public class EscolaController {
     public Escola create(@RequestBody Escola request) {
 
         Escola escola = new Escola(
+                request.getIdEscola(),
                 request.getName(),
                 request.getCity(),
                 request.getNeighborhood()
@@ -39,8 +40,8 @@ public class EscolaController {
         return escolaRepository.findById(idEscola);
     }
 
-    @RequestMapping("/{idClient}")
-    public List<Escola> findByNeighborhood(@PathVariable("idClient") String neighborhood){
+    @RequestMapping("/bairro/{bairro}")
+    public List<Escola> findByNeighborhood(@PathVariable("bairro") String neighborhood){
         return escolaRepository.findByNeighborhood(neighborhood);
     }
 }
