@@ -51,7 +51,7 @@ public class AnuncioController {
         return anuncioRepository.findByIdClient(idClient);
     }
 
-    @RequestMapping("/{type}")
+    @RequestMapping("/type/{type}")
     public List<Anuncio> getByType(@PathVariable("type") String type){
         return anuncioRepository.findByType(type);
     }
