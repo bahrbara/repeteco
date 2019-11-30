@@ -11,5 +11,6 @@ import java.util.List;
 public interface AnuncioRepository extends JpaRepository<Anuncio, Integer> {
     List<Anuncio> findByIdClient(int id);
     List<Anuncio> findByType(String type);
+    List<Anuncio> findAllByOrderByDtInicialDesc();
     void deleteById(Integer idAnuncio);
 }
