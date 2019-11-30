@@ -43,6 +43,11 @@ public class AnuncioController {
         return anuncioRepository.findAll();
     }
 
+    @RequestMapping("/order")
+    public List<Anuncio> findAllSorted() {
+        return anuncioRepository.findAllByOrderByDtInicialDesc();
+    }
+
     @RequestMapping("/{id}")
     public Optional<Anuncio> getById(@PathVariable("id") int idAnuncio){
         return anuncioRepository.findById(idAnuncio);
