@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -13,8 +12,24 @@ export default {
   components: {
     HelloWorld
   },
-  created() {
-    document.title = "Repeteco";
+  head: {
+    title: function() {
+      return {
+        inner: "Repeteco",
+        complement: 'Olá'
+      }
+    },
+    meta: [
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "ie=edge", content: "x-ua-compatible" }
+    ],
+    link: [
+      { rel: "shortcut icon", src: "./assets/favicon.ico?v=2" },
+      { rel: "apple-touch-icon", src: "./assets/icon.png" },
+      { rel: "stylesheet", src: "https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900" },
+      { rel: "stylesheet", src: "https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" },
+      { rel: "stylesheet", src: "https://fonts.googleapis.com/css?family=Satisfy" }
+    ]    
   }
 }
 </script>
