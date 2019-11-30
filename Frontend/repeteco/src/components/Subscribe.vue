@@ -31,4 +31,7 @@ export default {
 </script>
 
 <style scoped>
+.newsletter__block p, .newsletter__block .newsletter__box input, .newsletter__block .newsletter__box button {
+	color: #FFF;
+}
 </style>

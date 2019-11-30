@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueHead from 'vue-head'
-import './css/bootstrap.min.css'
+import BootstrapVue from 'bootstrap-vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import './css/plugins.css'
 import './css/style.css'
 import './css/custom.css'
@@ -14,6 +18,8 @@ import './css/custom.css'
 Vue.config.productionTip = false
 
 Vue.use(VueHead)
+Vue.use(BootstrapVue)
+
 
 new Vue({
   render: h => h(App),

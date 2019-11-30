@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-md-6 col-sm-6 col-6 col-lg-2">
               <div class="logo">
-                <a href="index.html">
+                <a href="#">
                   <img src="../assets/logo/logo.png" alt="logo images">
                 </a>
               </div>
@@ -14,34 +14,18 @@
             <div class="col-lg-8 d-none d-lg-block">
               <nav class="mainmenu__nav">
                 <ul class="meninmenu d-flex justify-content-start">
-                  <li class="drop with--one--item"><a href="index.html">Home</a></li>
+                  <li class="drop with--one--item"><a href="#">Home</a></li>
                   <li class="drop"><a href="#">Anúncios</a>
                     <div class="megamenu mega03">
                       <ul class="item item03">
-                        <li class="title">Anúncios</li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="servicos.html">Servicos</a></li>
-                      </ul>
-                      <ul class="item item03">
-                        <li class="title">Produtos</li>
-                        <li><a href="#">Mochilas</a></li>
-                        <li><a href="#">Estojos</a></li>
-                        <li><a href="#">Lancheiras</a></li>
-                        <li><a href="#">Fichários</a></li>
-                        <li><a href="#">Livros</a></li>
-                        <li><a href="#">Mais...</a></li>
-                      </ul>
-                      <ul class="item item03">
-                        <li class="title">Serviços</li>
-                        <li><a href="#">Transporte Escolar</a></li>
-                        <li><a href="#">Aulas Particulares</a></li>
-                        <li><a href="#">Esportes</a></li>
-                        <li><a href="#">Danças</a></li>
-                        <li><a href="#">Mais...</a></li>
+                        <li class="title">Administração</li>
+                        <li><a href="#" @click="modalShow = !modalShow">Produtos</a></li>
+                        <li><a href="#">Servicos</a></li>
+                        <li><a href="#">Usuários</a></li>
                       </ul>
                     </div>
                   </li>
-                  <li><a href="contato.html">Contato</a></li>
+                  <!-- <li><a href="#">Contato</a></li> -->
                 </ul>
               </nav>
             </div>
@@ -59,8 +43,8 @@
                         <div class="switcher-options">
                           <div class="switcher-currency-trigger">
                             <div class="setting__menu">
-                              <span><a href="/meus-produtos.html">Meus Produtos</a></span>
-                              <span><a href="/meus-servicos.html">Meus Serviços</a></span>
+                              <span><a href="#">Meus Produtos</a></span>
+                              <span><a href="#">Meus Serviços</a></span>
                             </div>
                           </div>
                         </div>
@@ -72,9 +56,9 @@
                         <div class="switcher-options">
                           <div class="switcher-currency-trigger">
                             <div class="setting__menu">
-                              <span><a href="/minha-conta.html">Minha Conta</a></span>
-                              <span><a href="/login.html">Login</a></span>
-                              <span><a href="/cadastro-usuario.html">Criar Conta</a></span>
+                              <span><a href="#">Minha Conta</a></span>
+                              <span><a href="#">Login</a></span>
+                              <span><a href="#">Criar Conta</a></span>
                             </div>
                           </div>
                         </div>
@@ -86,9 +70,9 @@
                         <div class="switcher-options">
                           <div class="switcher-currency-trigger">
                             <div class="setting__menu">
-                              <span><a href="/gerenciar-escolas.html">Gerenciar Escolas</a></span>
-                              <span><a href="/relatorio-anuncios.html">Relatórios de Anúncios</a></span>
-                              <span><a href="/relatorio-usuarios.html">Relatórios de Usuários</a></span>
+                              <span><a href="#">Gerenciar Escolas</a></span>
+                              <span><a href="#">Relatórios de Anúncios</a></span>
+                              <span><a href="#">Relatórios de Usuários</a></span>
                             </div>
                           </div>
                         </div>
@@ -104,25 +88,25 @@
             <div class="col-lg-12 d-none">
               <nav class="mobilemenu__nav">
                 <ul class="meninmenu">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#">Home</a></li>
                     <ul>
-                      <li><a href="contato.html">Sobre Nós</a></li>
-                      <li><a href="my-account.html">Minha Conta</a></li>
+                      <li><a href="#">Sobre Nós</a></li>
+                      <li><a href="#">Minha Conta</a></li>
                     </ul>
                   <li><a href="#">Anúncios</a>
                     <ul>
-                      <li><a href="meus-produtos.html">Produtos</a></li>
-                      <li><a href="meus-servicos.html">Serviços</a></li>
+                      <li><a href="3">Produtos</a></li>
+                      <li><a href="#">Serviços</a></li>
                     </ul>
                   </li>
-                  <li><a href="s#">Painel Administrativo</a>
+                  <li><a href="#">Painel Administrativo</a>
                     <ul>
-                      <li><a href="gerenciar-escolas.html">Gerenciar Escolas</a></li>
-                      <li><a href="relatorio-anuncios.html">Relatório de Anúncios</a></li>
-                      <li><a href="relatorio-usuarios.html">Relatório de Usuários</a></li>
+                      <li><a href="#">Gerenciar Escolas</a></li>
+                      <li><a href="#">Relatório de Anúncios</a></li>
+                      <li><a href="#">Relatório de Usuários</a></li>
                     </ul>
                   </li>
-                  <li><a href="contato.html">Contato</a></li>
+                  <li><a href="#">Contato</a></li>
                 </ul>
               </nav>
             </div>
@@ -130,33 +114,43 @@
           <!-- End Mobile Menu -->
           <div class="mobile-menu d-block d-lg-none">
           </div>
-          <!-- Mobile Menu -->	
+          <!-- Mobile Menu -->
         </div>		
       </header>
       <!-- //Header -->
-      <!-- Start Search Popup -->
-      <div class="brown--color box-search-content search_active block-bg close__top">
-        <form id="search_mini_form" class="minisearch" action="#">
-          <div class="field__search">
-            <input type="text" placeholder="Busque aqui por toda a loja...">
-            <div class="action">
-              <a href="#"><i class="zmdi zmdi-search"></i></a>
-            </div>
+      <b-modal v-model="modalShow" title="Cadastro de Produto">
+        <FormProduct />
+        <template v-slot:modal-footer="{ ok, cancel }">
+          <div class="contact-btn">
+            <b-button type="reset" class="btn-cancel" @click="cancel()">Cancelar</b-button>
+            <b-button type="submit" @click="ok()">Salvar</b-button>
           </div>
-        </form>
-        <div class="close__wrap">
-          <span>Fechar</span>
-        </div>
-      </div>
-      <!-- End Search Popup -->
+        </template>
+      </b-modal>
   </div>
 </template>
 
 <script>
+import FormProduct from './FormProduct.vue'
 export default {
-  name: 'Menu'
+  name: 'Menu',
+  components: {
+    FormProduct
+  },
+  data() {
+    return {
+      modalShow: false,
+      currentForm: ''
+    }
+  }
 }
 </script>
 
 <style scoped>
+.contact-btn {
+  width: 100%;
+}
+.contact-btn button{
+  border-radius: 0;
+}
 </style>
