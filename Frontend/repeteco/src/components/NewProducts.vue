@@ -12,7 +12,9 @@
 				</div>
 				<!-- Start Single Tab Content -->
 				<div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
-					<Product />
+					<div class="single__product" v-for="item in products" v-bind:key="item.idAnuncio">
+						<Product :data="item"/>
+					</div>					
 				</div>
 				<!-- End Single Tab Content -->
 			</div>
@@ -22,14 +24,30 @@
 
 <script>
 import Product from './Product.vue'
+import axios from 'axios';
 
 export default {
 	name: 'NewProducts',
   components: {
     Product
-  },
+	},
+	data() {
+    return {
+			products: []
+		}
+	},	
+	mounted () {
+			var self = this;
+      axios.get('http://localhost:8080/anuncio', this.product)
+      .then(function (response) {
+        self.products = response.data;
+      });
+	}
 }
 </script>
 
 <style scoped>
+single__product {
+	float: left;
+}
 </style>

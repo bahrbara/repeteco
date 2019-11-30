@@ -130,13 +130,13 @@
                     <div class="single-contact-form space-between">
                       <select class="form-select" name="tipo_produto" v-model="product.type">
                         <option>Tipo de produto</option>
-                        <option value="M">Material escolar</option>
-                        <option value="U">Uniforme escolar</option>
+                        <option value="MATERIAL">Material escolar</option>
+                        <option value="UNIFORME">Uniforme escolar</option>
                       </select>
                       <select class="form-select" name="estado_conservacao" v-model="product.conservacao">
                         <option>Estado de conservação</option>
-                        <option value="N">Novo</option>
-                        <option value="U">Usado</option>
+                        <option value="NOVO">Novo</option>
+                        <option value="USADO">Usado</option>
                       </select>									
                     </div>
                     <div class="single-contact-form space-between">
