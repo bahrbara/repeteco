@@ -12,7 +12,7 @@
     <artifactId>teste</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>teste</name>
-    <description>Teste Stock Info</description>
+    <description>Repeteco</description>
 
     <properties>
         <java.version>1.8</java.version>

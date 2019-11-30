@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EscolaRepository extends JpaRepository<Escola, Integer> {
     List<Escola> findByNeighborhood(String neighborhood);
+    void deleteById(Integer idEscola);
 }
