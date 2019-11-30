@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+    <Menu/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
+import Menu from './components/Menu.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
+    Menu,
     HelloWorld
   },
   head: {
