@@ -119,11 +119,52 @@
       </header>
       <!-- //Header -->
       <b-modal v-model="modalShow" title="Cadastro de Produto">
-        <FormProduct />
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <div class="contact-form-wrap">
+                <form id="contact-form" action="#" method="post">
+                    <div class="single-contact-form space-between">
+                        <input type="text" name="nome" v-model="product.titulo" placeholder="Título*">
+                    </div>
+                    <div class="single-contact-form space-between">
+                      <select class="form-select" name="tipo_produto" v-model="product.type">
+                        <option>Tipo de produto</option>
+                        <option value="M">Material escolar</option>
+                        <option value="U">Uniforme escolar</option>
+                      </select>
+                      <select class="form-select" name="estado_conservacao" v-model="product.conservacao">
+                        <option>Estado de conservação</option>
+                        <option value="N">Novo</option>
+                        <option value="U">Usado</option>
+                      </select>									
+                    </div>
+                    <div class="single-contact-form space-between">
+                      <textarea name="descricao" placeholder="Descrição" v-model="product.descricao"></textarea>
+                    </div>
+                    <div class="single-contact-form space-between">
+                      <select class="form-select" name="nome_escola" v-model="product.idEscola">
+                        <option>Nome da Escola</option>
+                        <option value="1">Alfa Objetivo</option>
+                      </select>	
+                      </div>								
+                      <div class="single-contact-form space-between">
+                        <input type="text" name="valor" placeholder="Valor*" v-model="product.valor">			
+                        <input type="text" name="tamanho" placeholder="Tamanho*" v-model="product.tamanho">
+                      </div>		
+                      <div class="single-contact-form space-between">
+                        <input type="file" name="anexo1">
+                        <input type="file" name="anexo1">
+                      </div>
+                    </form>
+                </div> 
+            </div>
+          </div>
+        </div>
         <template v-slot:modal-footer="{ ok, cancel }">
           <div class="contact-btn">
             <b-button type="reset" class="btn-cancel" @click="cancel()">Cancelar</b-button>
-            <b-button type="submit" @click="ok()">Salvar</b-button>
+            <b-button type="submit" @click="saveProduct(); ok();">Salvar</b-button>
           </div>
         </template>
       </b-modal>
@@ -131,16 +172,39 @@
 </template>
 
 <script>
-import FormProduct from './FormProduct.vue'
+import axios from 'axios';
+
 export default {
   name: 'Menu',
   components: {
-    FormProduct
+    // FormProduct
+  },
+  methods: {
+    saveProduct: function() {
+      axios.post('http://localhost:8080/anuncio', this.product)
+      .then(function (response) {
+        alert(response);
+      });
+    }
   },
   data() {
     return {
       modalShow: false,
-      currentForm: ''
+      currentForm: '',
+      product: {
+        "idClient": 1,
+        "idEscola": 1,
+        "titulo": null,
+        "descricao": null,
+        "dtInicial": null,
+        "dtFinal": null,
+        "valor": null,
+        "tamanho": null,
+        "conservacao": null,
+        "imagem1": null,
+        "imagem2": null,
+        "type": null
+      }
     }
   }
 }

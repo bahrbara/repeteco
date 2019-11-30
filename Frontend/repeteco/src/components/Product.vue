@@ -1,5 +1,5 @@
 <template>
-  <div class="single-product">
+
     <div class="product product__style--3">
       <div class="col-lg-3 col-md-4 col-sm-6 col-12">
         <div class="product__thumb">
@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="product__content content--center">
-          <h4><a href="single-product.html">Mochila Harry Potter</a></h4>
+          <h4><a href="single-product.html">{{this.data.titulo}}</a></h4>
           <ul class="prize d-flex">
             <li>R$35.00</li>
           </ul>
@@ -32,7 +32,6 @@
             </ul>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -41,11 +40,13 @@
 export default {
   name: 'Product',
   props: {
-    msg: String
+    data: Object
   }
 }
 </script>
 
 <style scoped>
-
+.single__product {
+	float: left;
+}
 </style>

@@ -47,7 +47,11 @@
                   <div class="single-contact-form space-between">
                     <input type="file" name="anexo1">
                     <input type="file" name="anexo1">
-                  </div>	
+                  </div>
+                  <div class="contact-btn">
+                    <b-button type="reset" class="btn-cancel" @click="cancel()">Cancelar</b-button>
+                    <b-button type="submit" @click="ok()">Salvar</b-button>
+                  </div>
                 </form>
             </div> 
         </div>
@@ -65,5 +69,10 @@ export default {
 </script>
 
 <style scoped>
-
+.contact-btn {
+  width: 100%;
+}
+.contact-btn button{
+  border-radius: 0;
+}
 </style>

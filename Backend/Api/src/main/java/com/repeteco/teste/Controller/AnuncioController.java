@@ -34,7 +34,7 @@ public class AnuncioController {
                 request.getImagem5(),
                 request.getType()
         );
-
+        
         return anuncioRepository.save(anuncio);
     }
 
