@@ -38,8 +38,10 @@ public class Anuncio {
 
     public Anuncio() {}
 
-    public Anuncio(String titulo, String descricao, String valor, String tamanho, String conservacao, Byte[] imagem1,
+    public Anuncio(int idClient, int idEscola, String titulo, String descricao, String valor, String tamanho, String conservacao, Byte[] imagem1,
                    Byte[] imagem2, Byte[] imagem3, Byte[] imagem4, Byte[] imagem5, String type) {
+        this.idClient = idClient;
+        this.idEscola = idEscola;
         this.titulo = titulo;
         this.descricao = descricao;
         this.dtInicial = Calendar.getInstance().getTime();
@@ -165,6 +167,22 @@ public class Anuncio {
 
     public void setImagem5(Byte[] imagem5) {
         this.imagem5 = imagem5;
+    }
+
+    public int getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+    public int getIdEscola() {
+        return idEscola;
+    }
+
+    public void setIdEscola(int idEscola) {
+        this.idEscola = idEscola;
     }
 
     @Override

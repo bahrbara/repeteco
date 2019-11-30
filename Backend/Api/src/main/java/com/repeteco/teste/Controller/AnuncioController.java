@@ -20,6 +20,8 @@ public class AnuncioController {
     public Anuncio create(@RequestBody Anuncio request) {
 
         Anuncio anuncio = new Anuncio(
+                request.getIdClient(),
+                request.getIdEscola(),
                 request.getTitulo(),
                 request.getDescricao(),
                 request.getValor(),
@@ -54,6 +56,12 @@ public class AnuncioController {
     @RequestMapping("/type/{type}")
     public List<Anuncio> getByType(@PathVariable("type") String type){
         return anuncioRepository.findByType(type);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String deleteById(@PathVariable("id") int idAnuncio) {
+        anuncioRepository.deleteById(idAnuncio);
+        return "Anúncio removido com sucesso " + idAnuncio;
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)

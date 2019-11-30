@@ -48,4 +48,10 @@ public class EscolaController {
     public List<Escola> findByNeighborhood(@PathVariable("bairro") String neighborhood){
         return escolaRepository.findByNeighborhood(neighborhood);
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public String deleteById(@PathVariable("id") int idEscola) {
+        escolaRepository.deleteById(idEscola);
+        return "Escola removida com sucesso " + idEscola;
+    }
 }

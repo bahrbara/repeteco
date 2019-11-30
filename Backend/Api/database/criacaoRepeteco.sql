@@ -48,3 +48,5 @@ ALTER TABLE Anuncio ADD CONSTRAINT FK_Anuncio_0
 ALTER TABLE Anuncio ADD CONSTRAINT FK_Anuncio_1
     FOREIGN KEY (id_escola)
     REFERENCES Escola (id_escola);
+
+CREATE SEQUENCE hibernate_sequence START 1;
