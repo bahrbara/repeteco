@@ -38,7 +38,7 @@ export default {
 	},	
 	mounted () {
 			var self = this;
-      axios.get('http://localhost:8080/anuncio', this.product)
+      axios.get('http://localhost:8080/anuncio/order/', this.product)
       .then(function (response) {
         self.products = response.data;
       });

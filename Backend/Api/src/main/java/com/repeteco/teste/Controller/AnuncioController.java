@@ -43,7 +43,7 @@ public class AnuncioController {
         return anuncioRepository.findAll();
     }
 
-    @RequestMapping("/order")
+    @RequestMapping("/order/")
     public List<Anuncio> findAllSorted() {
         return anuncioRepository.findAllByOrderByDtInicialDesc();
     }
