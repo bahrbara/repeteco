@@ -6,6 +6,11 @@ import './css/plugins.css'
 import './css/style.css'
 import './css/custom.css'
 
+// import "./js/popper.min.js"
+// import "./js/bootstrap.min.js"
+// import "./js/plugins.js"
+// import "./js/active.js"
+
 Vue.config.productionTip = false
 
 Vue.use(VueHead)

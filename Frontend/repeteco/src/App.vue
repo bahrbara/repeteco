@@ -1,19 +1,31 @@
 <template>
   <div id="app">
-    <Menu/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Menu />
+    <Slider />
+    <NewProducts />
+    <Subscribe />
+    <Products />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Slider from './components/Slider.vue'
+import NewProducts from './components/NewProducts.vue'
+import Products from './components/Products.vue'
+import Subscribe from './components/Subscribe.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
     Menu,
-    HelloWorld
+    Slider,
+    NewProducts,
+    Products,
+    Subscribe,
+    Footer
   },
   head: {
     title: function() {
@@ -38,12 +50,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
