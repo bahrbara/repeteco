@@ -199,7 +199,7 @@ export default {
         })
         .then(function () {
           alert("Imagem Salva");
-          self.$root.$emit('new_product', 'Novo produto cadastrado');
+          self.$root.$emit('refresh_products');
         });
       });
     }

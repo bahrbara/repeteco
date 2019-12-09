@@ -19,7 +19,7 @@
             <div class="actions_inner">
               <ul class="add_to_links">
                 <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li>
-                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-search"></i></a></li>
+                <li><a data-toggle="modal" @click="apagar()" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="bi bi-cross"></i></a></li>
               </ul>
             </div>
           </div>
@@ -38,10 +38,28 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'Product',
   props: {
     data: Object
+  },
+  methods: {
+    apagar: function() {
+      var self = this;
+      var del = confirm("Apagar o anúncio ID " + this.data.idAnuncio + "?");
+      if (del == true) {
+        axios({
+          method: 'delete',
+          url: 'http://localhost:8080/anuncio/' + this.data.idAnuncio
+        })
+        .then(function () {
+          alert("Anúncio apagado");
+          self.$root.$emit('refresh_products');
+        });
+      }
+    }
   }
 }
 </script>

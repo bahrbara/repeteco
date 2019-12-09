@@ -53,7 +53,7 @@ export default {
 	},
 	mounted () {
 			this.loadProducts();
-			this.$root.$on('new_product', () => {
+			this.$root.$on('refresh_products', () => {
 				this.loadProducts();
 			});
 	},

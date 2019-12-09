@@ -2,3 +2,5 @@
 Backend/.idea/vcs.xml
 Backend/.idea/workspace.xml
 Frontend/node_modules/*
+Frontend/images/.DS_Store
+Frontend/images/product/.DS_Store
