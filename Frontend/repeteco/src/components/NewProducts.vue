@@ -37,11 +37,19 @@ export default {
 		}
 	},	
 	mounted () {
+			this.loadProducts();
+			this.$root.$on('new_product', () => {
+				this.loadProducts();
+			});
+	},
+	methods: {
+		loadProducts: function() {
 			var self = this;
-      axios.get('http://localhost:8080/anuncio/order/', this.product)
-      .then(function (response) {
-        self.products = response.data;
-      });
+			axios.get('http://localhost:8080/anuncio/order/', this.product)
+			.then(function (response) {
+				self.products = response.data;
+			});
+		}
 	}
 }
 </script>

@@ -180,7 +180,7 @@ export default {
   methods: {
     saveProduct: function() {
       var file1 = document.querySelector('input[type=file]').files[0];
-
+      var self = this;
       var formData = new FormData();
       formData.append('imagem1', file1); 
 
@@ -194,11 +194,12 @@ export default {
         alert("Cadastro Salvo");
         axios({
           method: 'put',
-          url: 'http://localhost:8080/anuncio/' + res.data.idAnuncio,
+          url: 'http://localhost:8080/anuncio/imagem/' + res.data.idAnuncio,
           data: formData
         })
         .then(function () {
           alert("Imagem Salva");
+          self.$root.$emit('new_product', 'Novo produto cadastrado');
         });
       });
     }
