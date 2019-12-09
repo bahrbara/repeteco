@@ -40,7 +40,7 @@ public class AnuncioController {
 
     @RequestMapping("/order/")
     public List<Anuncio> findAllSorted() {
-        return anuncioRepository.findAllByOrderByDtInicialDesc();
+        return anuncioRepository.findAllByOrderByDtInicialDescIdAnuncioDesc();
     }
 
     @RequestMapping("/{id}")
@@ -64,7 +64,7 @@ public class AnuncioController {
         return "Anúncio removido com sucesso " + idAnuncio;
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = { "multipart/form-data" })
+    @RequestMapping(value = "/imagem/{id}", method = RequestMethod.PUT, consumes = { "multipart/form-data" })
     public Anuncio create(@PathVariable("id") int idAnuncio, @RequestPart(value = "imagem1", required = false) MultipartFile imagem1) throws Exception {
         Anuncio anuncioEdited = anuncioRepository.findById(idAnuncio).orElseThrow(() -> new Exception("Anúncio não encontrado"));
         anuncioEdited.setImagem1(imagem1.getBytes());
