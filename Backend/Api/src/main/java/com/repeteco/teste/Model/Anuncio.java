@@ -1,9 +1,14 @@
 package com.repeteco.teste.Model;
 
-import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "anuncio")
@@ -19,11 +24,7 @@ public class Anuncio {
     private String valor;
     private String tamanho;
     private String conservacao;
-    private Byte[] imagem1;
-    private Byte[] imagem2;
-    private Byte[] imagem3;
-    private Byte[] imagem4;
-    private Byte[] imagem5;
+    private byte[] imagem1;
     private String type;
 
     private static final int PRAZOEXPIRACAO = 30;
@@ -38,8 +39,7 @@ public class Anuncio {
 
     public Anuncio() {}
 
-    public Anuncio(int idClient, int idEscola, String titulo, String descricao, String valor, String tamanho, String conservacao, Byte[] imagem1,
-                   Byte[] imagem2, Byte[] imagem3, Byte[] imagem4, Byte[] imagem5, String type) {
+    public Anuncio(int idClient, int idEscola, String titulo, String descricao, String valor, String tamanho, String conservacao, byte[] imagem1, String type) {
         this.idClient = idClient;
         this.idEscola = idEscola;
         this.titulo = titulo;
@@ -50,10 +50,6 @@ public class Anuncio {
         this.tamanho = tamanho;
         this.conservacao = conservacao;
         this.imagem1 = imagem1;
-        this.imagem2 = imagem2;
-        this.imagem3 = imagem3;
-        this.imagem4 = imagem4;
-        this.imagem5 = imagem5;
         this.type = type;
     }
 
@@ -129,44 +125,12 @@ public class Anuncio {
         this.type = type;
     }
 
-    public Byte[] getImagem1() {
+    public byte[] getImagem1() {
         return imagem1;
     }
 
-    public void setImagem1(Byte[] imagem1) {
+    public void setImagem1(byte[] imagem1) {
         this.imagem1 = imagem1;
-    }
-
-    public Byte[] getImagem2() {
-        return imagem2;
-    }
-
-    public void setImagem2(Byte[] imagem2) {
-        this.imagem2 = imagem2;
-    }
-
-    public Byte[] getImagem3() {
-        return imagem3;
-    }
-
-    public void setImagem3(Byte[] imagem3) {
-        this.imagem3 = imagem3;
-    }
-
-    public Byte[] getImagem4() {
-        return imagem4;
-    }
-
-    public void setImagem4(Byte[] imagem4) {
-        this.imagem4 = imagem4;
-    }
-
-    public Byte[] getImagem5() {
-        return imagem5;
-    }
-
-    public void setImagem5(Byte[] imagem5) {
-        this.imagem5 = imagem5;
     }
 
     public int getIdClient() {
@@ -197,10 +161,6 @@ public class Anuncio {
                 ", tamanho='" + tamanho + '\'' +
                 ", conservacao='" + conservacao + '\'' +
                 ", imagem1=" + Arrays.toString(imagem1) +
-                ", imagem2=" + Arrays.toString(imagem2) +
-                ", imagem3=" + Arrays.toString(imagem3) +
-                ", imagem4=" + Arrays.toString(imagem4) +
-                ", imagem5=" + Arrays.toString(imagem5) +
                 ", type='" + type + '\'' +
                 ", idClient=" + idClient +
                 ", idEscola=" + idEscola +

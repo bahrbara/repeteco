@@ -4,10 +4,11 @@ import com.repeteco.teste.Model.Anuncio;
 import com.repeteco.teste.Repository.AnuncioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
 
 @RestController
 @RequestMapping("/anuncio")
@@ -15,10 +16,9 @@ public class AnuncioController {
 
     @Autowired
     private AnuncioRepository anuncioRepository;
-
+    
     @RequestMapping(method = RequestMethod.POST)
     public Anuncio create(@RequestBody Anuncio request) {
-
         Anuncio anuncio = new Anuncio(
                 request.getIdClient(),
                 request.getIdEscola(),
@@ -27,14 +27,9 @@ public class AnuncioController {
                 request.getValor(),
                 request.getTamanho(),
                 request.getConservacao(),
-                request.getImagem1(),
-                request.getImagem2(),
-                request.getImagem3(),
-                request.getImagem4(),
-                request.getImagem5(),
+                null,
                 request.getType()
         );
-        
         return anuncioRepository.save(anuncio);
     }
 
@@ -69,16 +64,19 @@ public class AnuncioController {
         return "Anúncio removido com sucesso " + idAnuncio;
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = { "multipart/form-data" })
+    public Anuncio create(@PathVariable("id") int idAnuncio, @RequestPart(value = "imagem1", required = false) MultipartFile imagem1) throws Exception {
+        Anuncio anuncioEdited = anuncioRepository.findById(idAnuncio).orElseThrow(() -> new Exception("Anúncio não encontrado"));
+        anuncioEdited.setImagem1(imagem1.getBytes());
+        return anuncioRepository.save(anuncioEdited);
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public Anuncio edit(@PathVariable("id") int idAnuncio, @RequestBody Anuncio request) throws Exception {
         Anuncio anuncioEdited = anuncioRepository.findById(idAnuncio).orElseThrow(() -> new Exception("Anúncio não encontrado"));
         anuncioEdited.setConservacao(request.getConservacao());
         anuncioEdited.setDescricao(request.getDescricao());
         anuncioEdited.setImagem1(request.getImagem1());
-        anuncioEdited.setImagem1(request.getImagem2());
-        anuncioEdited.setImagem1(request.getImagem3());
-        anuncioEdited.setImagem1(request.getImagem4());
-        anuncioEdited.setImagem1(request.getImagem5());
         anuncioEdited.setTamanho(request.getTamanho());
         anuncioEdited.setTitulo(request.getTitulo());
         anuncioEdited.setValor(request.getValor());

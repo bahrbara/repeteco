@@ -153,8 +153,7 @@
                         <input type="text" name="tamanho" placeholder="Tamanho*" v-model="product.tamanho">
                       </div>		
                       <div class="single-contact-form space-between">
-                        <input type="file" name="anexo1">
-                        <input type="file" name="anexo1">
+                        <input type="file" name="imagem1">
                       </div>
                     </form>
                 </div> 
@@ -177,13 +176,30 @@ import axios from 'axios';
 export default {
   name: 'Menu',
   components: {
-    // FormProduct
   },
   methods: {
     saveProduct: function() {
-      axios.post('http://localhost:8080/anuncio', this.product)
-      .then(function (response) {
-        alert(response);
+      var file1 = document.querySelector('input[type=file]').files[0];
+
+      var formData = new FormData();
+      formData.append('imagem1', file1); 
+
+      axios({
+        method: 'post',
+        cache: false,
+        url: 'http://localhost:8080/anuncio',
+        data: this.product
+      })
+      .then(function (res) {
+        alert("Cadastro Salvo");
+        axios({
+          method: 'put',
+          url: 'http://localhost:8080/anuncio/' + res.data.idAnuncio,
+          data: formData
+        })
+        .then(function () {
+          alert("Imagem Salva");
+        });
       });
     }
   },
@@ -194,16 +210,15 @@ export default {
       product: {
         "idClient": 1,
         "idEscola": 1,
-        "titulo": null,
+        "titulo": "Mochila",
         "descricao": null,
         "dtInicial": null,
         "dtFinal": null,
-        "valor": null,
-        "tamanho": null,
-        "conservacao": null,
+        "valor": 123,
+        "tamanho": 2,
+        "conservacao": "NOVO",
         "imagem1": null,
-        "imagem2": null,
-        "type": null
+        "type": "MATERIAL"
       }
     }
   }

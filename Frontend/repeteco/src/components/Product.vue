@@ -3,8 +3,9 @@
     <div class="product product__style--3">
       <div class="col-lg-3 col-md-4 col-sm-6 col-12">
         <div class="product__thumb">
-          <a class="first__img" href="#"><img src="../assets/books/1.jpg" alt="product image"></a>
-          <a class="second__img animation1" href="#"><img src="../assets/books/2.jpg" alt="product image"></a>
+          <a v-if="this.data.imagem1" class="first__img" href="#"><img v-bind:src="this.data.imagem1" alt="product image"></a>
+          <!-- <a class="first__img" href="#"><img src="../assets/books/1.jpg" alt="product image"></a> -->
+          <!-- <a class="second__img animation1" href="#"><img src="../assets/books/2.jpg" alt="product image"></a> -->
           <div class="hot__box">
             <span class="hot-label">{{this.data.conservacao}}</span>
           </div>
